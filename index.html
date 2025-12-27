@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+<html lang="pt-BR">
 
 <head>
-    <title>Ada Lovelace</title>
+    <title>Ada Lovelace | Mulheres na Tecnologia</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="./image/favicon.png">
 </head>
@@ -34,7 +35,7 @@
             primeira
             pessoa a escrever um algoritmo para ser processado por uma máquina na história da computação. </p>
 
-        <img src="image/adaPintura.png" alt="Pintura colorida da Ada.">
+        <img src="image/adaPintura.png" alt="Retrato ilustrado de Ada Lovelace.">
 
         <section id="infancia">
             <h3 class="titulo-verde">Infância</h3>
@@ -176,15 +177,18 @@
 
     <form>
         <Label for="nome-usuario">Nome:</Label>
-        <input type="text" id="nome-usuario" placeholder="Digite seu nome"></input>
+        <input type="text" id="nome-usuario" placeholder="Digite seu nome" required></input>
 
         <Label for="email-usuario">Email:</Label>
-        <input type="email" id="email-usuario" placeholder="Digite seu email"></input>
+        <input type="email" id="email-usuario" placeholder="Digite seu email" required></input>
 
         <label for="telefone-usuario">Telefone</label>
-        <input type="number" id="telefone-usuario" placeholder="Digite seu telefone"></input>
+        <input type="number" id="telefone-usuario" placeholder="Digite seu telefone" required></input>
 
         <button id="botaoEnviar" type="submit">Enviar</button>
+
+        <p id="mensagemFormulario" aria-live="polite"></p>
+
     </form>
 
     <script type="text/javascript" src="script.js"></script>
