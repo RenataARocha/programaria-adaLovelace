@@ -100,6 +100,7 @@ Durante o desenvolvimento deste projeto, foram trabalhados conceitos importantes
 Desenvolvedora Front-End em transição de carreira
 
 - GitHub: [https://github.com/RenataARocha](https://github.com/RenataARocha)
+- LinkedIn: [https://www.linkedin.com/in/renata-alexandre-rocha/](https://www.linkedin.com/in/renata-alexandre-rocha/)
 
 ---
 
