@@ -1,19 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
 body {
     text-align: center;
     font-family: Open Sans, sans-serif;
     background-color: #8a71c9;
     color: #ffffff;
     margin: 0px 0px 30px 0px;
+    padding: 0 1.5rem;
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 300;
 }
 
 h2 {
     color: #2a0074;
-    font-size: 2.5rem;
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
 }
 
 h3 {
@@ -23,7 +30,7 @@ h3 {
 
 p {
     font-size: 1.2rem;
-    line-height: 1, 5;
+    line-height: 1.5;
 }
 
 .titulo-verde {
@@ -39,7 +46,8 @@ p {
 }
 
 section {
-    width: 55%;
+    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -72,27 +80,135 @@ ul {
 .menu-principal {
     background-color: #FF6CB5;
     max-width: 60%;
-    height: 2.5rem;
-    margin: 0 auto;
-
+    padding: 0.8rem 1rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
 }
+
 
 .menu-principal a {
     color: #fff;
-    text-decoration: underline;
-    font-weight: normal;
+    text-decoration: none;
+    font-weight: bold;
     flex-direction: row;
 }
 
-.menu-principal li {
-    display: inline-block;
-    line-height: 2.5;
-    margin: 0 3rem;
+.menu-principal a:hover,
+.menu-principal a:focus {
+    color: #e7ceffe7;
 }
+
+
+.menu-principal ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+
+.mensagem {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.mensagem-sucesso {
+    background: #10c27d;
+    color: #ffffff;
+}
+
+
+.mensagem-erro {
+    background: #f53d3d;
+    color: #ffffff;
+}
+
+
+
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+}
+
+
+form label {
+    display: block;
+    margin-top: 1.2rem;
+    font-weight: bold;
+}
+
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+    border: 1px solid #ccc;
+}
+
 
 button {
     background-color: #41f341;
+    transition:
+        background-color 0.3s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
     border: 1px solid transparent;
-    padding: 0.21rem 1rem;
+    padding: 0.41rem 1rem;
     border-radius: 0.2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: #2de62d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+button:disabled {
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    h3,
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    .menu-principal ul {
+        gap: 0.8rem;
+    }
 }

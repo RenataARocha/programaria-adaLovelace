@@ -12,13 +12,18 @@ botaoEnviar.addEventListener(
 function validaFormulario(event) {
     event.preventDefault()
 
+    mensagem.className = "mensagem"
+
     if (
-        nomeInput.value != "" &&
-        emailInput.value != "" &&
-        telefoneInput.value != "") {
+        nomeInput.value !== "" &&
+        emailInput.value !== "" &&
+        telefoneInput.value !== ""
+    ) {
         mensagem.textContent = "✅ Prontinho! Você receberá as novidades por email."
+        mensagem.classList.add("mensagem-sucesso")
     } else {
         mensagem.textContent = "❌ Por favor, preencha os campos nome e email!"
+        mensagem.classList.add("mensagem-erro")
     }
 
     botaoEnviar.textContent = "Enviando..."
@@ -31,6 +36,7 @@ function validaFormulario(event) {
 
     setTimeout(() => {
         mensagem.textContent = ""
+        mensagem.className = "mensagem"
     }, 3000)
 
 
